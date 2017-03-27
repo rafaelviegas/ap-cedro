@@ -1,0 +1,21 @@
+﻿<div ng-controller="restaurantEditController as vm">
+    <div class="container">
+
+        <h2>Edição de Restaurante</h2>
+
+        <div class="col-md-12">
+            <fieldset>
+                <legend>Dados</legend>
+                <div class="form-group">
+                    <label>Nome do restaurante:</label>
+                    <input type="text" class="form-control" ng-model="restaurant.name">
+                </div>
+
+                <button class="btn btn-danger" ng-click="cancel()"><i class="fa fa-undo"></i> Cancelar</button>
+                <button class="btn btn-success" ng-click="edit()" ng-disabled="!restaurant.name"><i class="fa fa-floppy-o"></i> Editar</button>
+
+            </fieldset>
+        </div>
+    </div>
+
+</div>

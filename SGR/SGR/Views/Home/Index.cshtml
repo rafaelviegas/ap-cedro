@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGR - Sistema de Gerenciamento de Restaurantes</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/ui-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/index">SGR</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/index">Home</a></li>
+                    <li><a href="#/restaurants">Restaurantes</a></li>
+                    <li><a href="#/dishes">Pratos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div ng-view></div>
+
+        <hr />
+        <footer>
+            <p>&copy; - SGR - Sistema de Gerenciamento de Restaurantes</p>
+        </footer>
+    </div>
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.loadingoverlay.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="~/Scripts/ui-grid.js"></script>
+    <script src="~/Scripts/angular-translate.js"></script>
+    <script src="~/Scripts/angular-locale_pt-br.js"></script>
+    <script src="~/Scripts/init.js"></script>
+    <script src="~/App/app.js"></script>
+    <script src="~/App/config/config.js"></script>
+    <script src="~/App/config/routes.js"></script>
+    <script src="~/App/services/serviceBase.js"></script>
+    <script src="~/App/services/dadosService.js"></script>
+
+    <script src="~/App/controllers/restaurant/restaurantController.js"></script>
+    <script src="~/App/controllers/restaurant/restaurantAddController.js"></script>
+    <script src="~/App/controllers/restaurant/restaurantEditController.js"></script>
+
+    <script src="~/App/controllers/dish/dishController.js"></script>
+    <script src="~/App/controllers/dish/dishAddController.js"></script>
+    <script src="~/App/controllers/dish/dishEditController.js"></script>
+    <script src="~/App/controllers/homeController.js"></script>
+
+</body>
+</html>

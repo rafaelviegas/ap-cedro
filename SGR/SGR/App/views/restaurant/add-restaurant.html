@@ -1,0 +1,21 @@
+﻿<div ng-controller="restaurantAddController as vm">
+    <div class="container">
+
+        <h2>Cadastro de Restaurante</h2>
+
+        <div class="col-md-12">
+            <fieldset>
+                <legend>Dados</legend>
+                <div class="form-group">
+                    <label>Nome do restaurante:</label>
+                    <input type="text" class="form-control" ng-model="restaurant.name" >
+                </div>
+
+                <button class="btn btn-danger" ng-click="cancel()" ><i class="fa fa-undo"></i> Cancelar</button>
+                <button class="btn btn-success" ng-disabled="!restaurant.name" ng-click="add()"><i class="fa fa-floppy-o"></i> Salvar</button>
+
+            </fieldset>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,29 @@
+﻿﻿
+<div ng-controller="restaurantController as vm">
+    <div class="container">
+        
+        <h2>Restaurantes</h2>
+
+        <div class="col-md-12">
+            <fieldset>
+                <legend>Filtros</legend>
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" ng-model="search_term">
+                </div>
+
+                <button class="btn btn-primary" ng-disabled="!search_term" ng-click="search()"><i class="fa fa-search"></i> Pesquisar</button>
+                <button class="btn btn-success" ng-click="addRestaurant()"><i class="icon-user icon-white" ></i> Cadastrar novo Restaurante Pesquisar</button>
+            
+            </fieldset>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-12">
+                <div ui-grid="gridOptions"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

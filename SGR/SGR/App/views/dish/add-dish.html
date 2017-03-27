@@ -1,0 +1,33 @@
+﻿<div ng-controller="dishAddController">
+    <div class="container">
+
+        <h2>Cadastro de Pratos</h2>
+
+        <div class="col-md-12">
+            <fieldset>
+                <legend>Dados</legend>
+                <div class="form-group">
+                    <label>Restaurante:</label>
+                    <select class="form-control" ng-model="dish.restaurantId">
+                        <option ng-repeat="restaurant in dish.restaurants" value="{{restaurant.RestaurantId}}">{{restaurant.Name}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Prato:</label>
+                    <input type="text" class="form-control" placeholder="Macarrão" ng-model="dish.name"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Preço(R$):</label>
+                    <input type="text" class="form-control" placeholder="20" ng-model="dish.price"/>
+                </div>
+
+                <button class="btn btn-danger" ng-click="cancel()"><i class="fa fa-undo"></i> Cancelar</button>
+                <button class="btn btn-success" ng-disabled="!dish.name && !dish.price && !dish.restaurantId" ng-click="add()"><i class="fa fa-floppy-o"></i> Salvar</button>
+
+            </fieldset>
+        </div>
+    </div>
+
+</div>
